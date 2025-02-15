@@ -1,14 +1,22 @@
-// import the message component in App.tsx
-// import the ListGroup component in App.tsx
+import React from 'react';
+import ListGroup from './components/ListGroup.tsx';
 
-import ListGroup from "./components/ListGroupt";
-// use the message component in the App component
 function App() {
+  const items = [
+    'Sundarban',
+    'Coxs Bazar',
+    'Sajek Valley',
+    'Gazipur',
+    'Mymensingh',
+    'Chapainawabganj',
+    'Rangamati',
+  ];
+
   return (
     <div>
-      <ListGroup />
+      <ListGroup items={items} />
     </div>
   );
 }
-// export the App component
+
 export default App;

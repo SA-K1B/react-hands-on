@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 
-// create a new listgroup functional component
-function ListGroup() {
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+interface ListGroupProps {
+  items: string[];
+}
 
-  const items = [
-    'Sundarban',
-    'Coxs Bazar',
-    'Sajek Valley',
-    'Gazipur',
-    'Mymensingh',
-    'Chapainawabganj',
-    'Rangamati',
-  ];
+// create a new listgroup functional component
+function ListGroup({ items }: ListGroupProps) {
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
   const handleClick = (item: string) => {
     console.log(item);
@@ -21,6 +15,7 @@ function ListGroup() {
 
   return (
     <div>
+      <h2>Places to Visit in Bangladesh</h2>
       {items.length === 0 ? (
         <p>No items found</p>
       ) : (
