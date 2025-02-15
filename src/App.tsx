@@ -5,6 +5,7 @@ import Login from './components/Login';
 import TouristSpot from './components/TouristPlace';
 import ListGroup from './components/TouristPlace';
 import styles from './components/Navbar.module.css';
+import Tourists from './components/Tourists';
 function App() {
   const items = [
     'Sundarban',
@@ -29,12 +30,17 @@ function App() {
           <li>
             <Link to="/tourist-spot">Tourist Spot</Link>
           </li>
+          <li>
+            <Link to="/tourists">Tourists</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tourist-spot" element={<ListGroup items={items}/>} />
+        {/* // add route for tourists */}
+        <Route path="/tourists" element={<Tourists />} />
       </Routes>
     </Router>
   );
