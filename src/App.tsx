@@ -1,10 +1,12 @@
 // import the message component in App.tsx
-import Message from './message';
+// import the ListGroup component in App.tsx
+
+import ListGroup from "./components/ListGroupt";
 // use the message component in the App component
 function App() {
   return (
     <div>
-      <Message />
+      <ListGroup />
     </div>
   );
 }
