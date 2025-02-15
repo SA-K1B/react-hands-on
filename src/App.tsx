@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import TouristSpot from './components/TouristPlace';
-import ListGroup from './components/ListGroupt';
-
+import ListGroup from './components/TouristPlace';
+import styles from './components/Navbar.module.css';
 function App() {
   const items = [
     'Sundarban',
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Router>
-      <nav>
+      <nav className={styles.navbar}>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/tourist-spot" element={<TouristSpot />} />
+        <Route path="/tourist-spot" element={<ListGroup items={items}/>} />
       </Routes>
     </Router>
   );
