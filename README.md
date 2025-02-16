@@ -1,4 +1,4 @@
-# React Starter Project with Firebase Authentication
+# React Project with Firebase Authentication
 
 This project is a React application using TypeScript and Vite for development. It includes Firebase authentication for user sign-up, login, and logout functionalities. The project also uses `react-router-dom` for routing and CSS modules for styling.
 
